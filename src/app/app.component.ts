@@ -8,6 +8,9 @@ import { AppState } from './app.service';
 import { Home } from './home';
 import { RouterActive } from './router-active';
 
+window['ons'] = require('onsenui');
+import { ONS_DIRECTIVES } from 'angular2-onsenui';
+
 /*
  * App Component
  * Top Level Component
@@ -16,7 +19,7 @@ import { RouterActive } from './router-active';
   selector: 'app',
   pipes: [ ],
   providers: [ ],
-  directives: [ RouterActive ],
+  directives: [ RouterActive, ONS_DIRECTIVES ],
   encapsulation: ViewEncapsulation.None,
   styles: [
     require('./app.css')
